@@ -1,4 +1,3 @@
-
 let ingredients1 = "100 gr flour" + "1 tablespoon salt" + "1 teaspoon sugar" + "65 ml of warm water" + "Half a tablespoon of extra virgin olive oil" + "Half an envelope of yeast";
 
 let ingredients2 = "Tomato sauce" + "Mozzarella cheese" + "Salami, Italian pepperoni" + "Black pepper, oregano and basil" + "A little extra virgin olive oil";
@@ -33,8 +32,6 @@ let step14 = "If we like cheese we can also add grated cheese on top of the mozz
 
 let step15 = "We put it in the oven for half an hour at 170ºC, although the time is relative! You have to pay attention to the edges of the pizza and the cheese, and when the edges are golden brown and the cheese is well melted, the pizza is ready"
 
-function () {
-    
-}
+
  
 console.log();
