@@ -52,3 +52,5 @@ Pizza delivered
 
 ## Extra Challenge:
 The software should allow the preparation of any pizza that is added to the list of available pizzas and if it is not available, the software should allow the preparation of any pizza that is added to the list of available pizzas.
+
+### I added that you can also choose the ingredients after selecting the pizza.

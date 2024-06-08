@@ -1,3 +1,44 @@
+import promptSync from 'prompt-sync';
+import { prepararPizza } from './pizza.js';
+
+const prompt = promptSync();
+
+const pizzasDisponibles = ['pepperoni', 'margarita', 'hawaiana', 'vegetariana'];
+const ingredientesDisponibles = ['tomate', 'mozzarella', 'pepperoni', 'albahaca fresca', 'jamón', 'piña', 'verduras variadas', 'aceitunas negras'];
+
+console.log('Pizzas disponibles:');
+pizzasDisponibles.forEach((pizza, index) => {
+    console.log(`${index + 1}. ${pizza}`);
+});
+
+const nombrePizza = prompt('Selecciona el número de la pizza que quieres: ');
+const pizzaSeleccionada = pizzasDisponibles[parseInt(nombrePizza) - 1];
+
+if (pizzaSeleccionada) {
+    console.log(`Pizza ${pizzaSeleccionada} en preparación`);
+    
+    let ingredientesElegidos = [];
+    let ingrediente;
+    
+    console.log("Elige los ingredientes adicionales que desees (escribe 'listo' cuando termines): ");
+    while (true) {
+        ingrediente = prompt('Ingrediente: ').toLowerCase();
+        if (ingrediente === 'listo') {
+            break;
+        }
+        if (ingredientesDisponibles.includes(ingrediente)) {
+            ingredientesElegidos.push(ingrediente);
+            console.log(`${ingrediente} añadido a la pizza.`);
+        } else {
+            console.log(`Ingrediente no disponible. Ingredientes disponibles: ${ingredientesDisponibles.join(', ')}`);
+        }
+    }
+    
+    prepararPizza(pizzaSeleccionada, ingredientesElegidos);
+} else {
+    console.log('Lo siento, no tenemos esa pizza disponible.');
+}
+
 function mezclarLevadura() {
     console.log("Mezclar 30 gramos de levadura fresca con 2½ tazas de agua tibia");
 }
